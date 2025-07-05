@@ -192,6 +192,17 @@ function PortfolioContent() {
     }, 1500);
   };
 
+  // Resume download logic
+  const handleDownloadResume = () => {
+    // You should place your resume file in the public/ directory, e.g., public/resume.pdf
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Zain_Khokhar_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       {/* Theme Switcher */}
@@ -261,7 +272,7 @@ function PortfolioContent() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className={`py-20 ${theme.sectionBg}`}>
+      <section id="home" className={`py-55 ${theme.sectionBg}`}>
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h1 className={`text-4xl md:text-5xl font-bold ${theme.text} mb-4`}>
@@ -285,12 +296,22 @@ function PortfolioContent() {
                 Contact Me
               </a>
             </div>
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={handleDownloadResume}
+                className={`${theme.button} w-full max-w-2xl py-2 rounded-md font-medium transition-colors text-lg tracking-wide`}
+                style={{ minWidth: '320px', maxWidth: '600px', height: '2.25rem', fontSize: '1.1rem', paddingTop: '0.25rem', paddingBottom: '0.25rem' }}
+                type="button"
+              >
+                Download Resume
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className={`py-16 ${theme.cardBg}`}>
+      <section id="about" className={`py-30 ${theme.cardBg}`}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className={`text-3xl font-bold text-center ${theme.text} mb-12`}>About Me</h2>
@@ -326,7 +347,7 @@ function PortfolioContent() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className={`py-16 ${theme.sectionBg}`}>
+      <section id="skills" className={`py-50 ${theme.sectionBg}`}>
         <div className="container mx-auto px-4">
           <h2 className={`text-3xl font-bold text-center ${theme.text} mb-12`}>Technical Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -346,7 +367,7 @@ function PortfolioContent() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className={`py-16 ${theme.cardBg}`}>
+      <section id="projects" className={`py-30 ${theme.cardBg}`}>
         <div className="container mx-auto px-4">
           <h2 className={`text-3xl font-bold text-center ${theme.text} mb-12`}>Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -392,7 +413,7 @@ function PortfolioContent() {
       </section>
 
       {/* Experience & Achievements Section */}
-      <section id="experience" className={`py-16 ${theme.sectionBg}`}>
+      <section id="experience" className={`py-36 ${theme.sectionBg}`}>
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -419,7 +440,7 @@ function PortfolioContent() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className={`py-16 ${theme.cardBg}`}>
+      <section id="contact" className={`py-30 ${theme.cardBg}`}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className={`text-3xl font-bold text-center ${theme.text} mb-12`}>Get In Touch</h2>
