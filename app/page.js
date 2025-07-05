@@ -126,7 +126,7 @@ const projects = [
     description: "Explore the frontiers of Artificial Intelligence. News, blogs, and resources on AI innovation.",
     image: "/techblog.png",
     imageAlt: "AI Tech Blog Screenshot",
-    link: "#",
+    link: "https://ai-tech-blog-26p6.vercel.app/",
     technologies: ["Next.js", "Tailwind CSS","Node js", "React"],
   },
   {
@@ -135,7 +135,7 @@ const projects = [
     description: "Admin dashboard for managing courier branches, staff, parcels, and logistics.",
     image: "/courier.png",
     imageAlt: "Courier Management System Screenshot",
-    link: "#",
+    link: "https://courier-management-system-iota.vercel.app/",
     technologies: ["Next js", "Node.js", "MongoDB"],
   },
 ];
